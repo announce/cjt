@@ -1,6 +1,6 @@
 # cjt
 !/.editorconfig
-!/.travis-ci.yml
+!/.travis.yml
 !/.nvmrc
 /build/
 !/build/.gitkeep
