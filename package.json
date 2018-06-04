@@ -1,0 +1,29 @@
+{
+  "name": "cjt",
+  "version": "1.0.0",
+  "description": "A library to convert CSV text to Jira's table notation",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "intelli-espower-loader": "^1.0.1",
+    "javascript-csv": "^1.0.7",
+    "mocha": "^5.2.0",
+    "power-assert": "^1.5.0",
+    "standard": "^11.0.1"
+  },
+  "scripts": {
+    "test": "standard --env mocha --fix && mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/announce/cjt.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/announce/cjt/issues"
+  },
+  "homepage": "https://github.com/announce/cjt#readme"
+}
