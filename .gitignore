@@ -1,5 +1,7 @@
 # cjt
 !/.editorconfig
+/build/
+!/build/.gitkeep
 
 # Logs
 logs

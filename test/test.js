@@ -1,7 +1,7 @@
 'use strict'
 
 const assert = require('assert')
-const cjt = require('./cjt')
+const cjt = require('../cjt')
 
 describe('Conversion', function () {
   let csv, jiraTable
@@ -19,7 +19,7 @@ describe('Conversion', function () {
       assert.equal(cjt.convert(csv), jiraTable)
     })
     it('should trim the redundant break lines', () => {
-      assert.equal(cjt.convert(`\n\n${csv}\n`), jiraTable)
+      assert.equal(cjt.convert(`\n\n${csv}\n\n`), jiraTable)
     })
     it('should return zero-length string when the input is empty', () => {
       assert.equal(cjt.convert(''), '')

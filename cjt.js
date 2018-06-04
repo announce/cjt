@@ -4,8 +4,8 @@ const os = require('os')
 const _ = require('lodash')
 const csvParser = require('javascript-csv')
 
-const convert = function (input) {
-  const data = csvParser.toArrays(input)
+const convert = (input) => {
+  const data = csvParser.toArrays(_.trim(input))
   if (data.length < 1) {
     return ''
   }
@@ -21,20 +21,20 @@ const convert = function (input) {
   return `${header}${os.EOL}${body}`
 }
 
-const hasElement = function (row) {
+const hasElement = (row) => {
   return !_.every(row, _.isEmpty)
 }
 
-const format = function (row, sep) {
+const format = (row, sep) => {
   const h = _.join(row, sep)
   return `${sep}${h}${sep}`
 }
 
-const formatHeader = function (row) {
+const formatHeader = (row) => {
   return format(row, '||')
 }
 
-const formatBody = function (row) {
+const formatBody = (row) => {
   return format(row, '|')
 }
 
