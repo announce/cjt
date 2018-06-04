@@ -10,7 +10,8 @@ describe('Conversion', function () {
       'heading 1,heading 2,heading 3' +
       '\ncol A1,col A2,col A3' +
       '\ncol B1,col B2,col B3'
-    jiraTable = '||heading 1||heading 2||heading 3||' +
+    jiraTable =
+      '||heading 1||heading 2||heading 3||' +
       '\n|col A1|col A2|col A3|' +
       '\n|col B1|col B2|col B3|'
   })

@@ -23,6 +23,7 @@
     "build": "npm run bundle && npm run minify",
     "bundle": "browserify cjt.js -o build/bundle.js --standalone Cjt",
     "minify": "uglifyjs --compress --mangle -o build/bundle.min.js -- build/bundle.js",
+    "prepublish": "npm run test",
     "start": "node index.js"
   },
   "browserify": {
