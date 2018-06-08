@@ -1,15 +1,16 @@
 'use strict'
 
 const assert = require('assert')
-const cjt = require('../cjt')
+const cjt = require('../src/cjt')
 
 describe('Conversion', function () {
   let csv, jiraTable
   beforeEach(() => {
-    csv =
-      'heading 1,heading 2,heading 3' +
-      '\ncol A1,col A2,col A3' +
-      '\ncol B1,col B2,col B3'
+    csv = `
+      heading 1,heading 2,heading 3
+      col A1,col A2,col A3
+      col B1,col B2,col B3
+    `
     jiraTable =
       '||heading 1||heading 2||heading 3||' +
       '\n|col A1|col A2|col A3|' +
