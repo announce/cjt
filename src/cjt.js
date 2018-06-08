@@ -26,7 +26,8 @@ const hasElement = (row) => {
 }
 
 const format = (row, sep) => {
-  const h = _.join(row, sep)
+  const r = _.map(row, _.trim)
+  const h = _.join(r, sep)
   return `${sep}${h}${sep}`
 }
 
