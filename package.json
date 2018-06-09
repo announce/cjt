@@ -1,6 +1,6 @@
 {
   "name": "cjt",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A library to convert CSV text to Jira's table notation",
   "main": "dist/index.js",
   "dependencies": {
@@ -15,6 +15,9 @@
     "onchange": "^4.0.0",
     "power-assert": "^1.5.0",
     "standard": "^11.0.1"
+  },
+  "bin" : {
+    "cjt" : "dist/cli.js"
   },
   "scripts": {
     "test": "npm run lint && mocha",
