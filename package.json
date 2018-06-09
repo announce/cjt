@@ -36,7 +36,7 @@
     "minify:content": "uglifyjs --compress --mangle -o dist/content.min.js -- tmp/content.js",
     "minify:background": "uglifyjs --compress --mangle -o dist/background.min.js -- tmp/background.js",
     "compress": "zip -r dist.zip dist",
-    "start": "npm run watch"
+    "start": "npm run bundle && npm run watch"
   },
   "standard": {
     "globals": [

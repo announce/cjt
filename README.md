@@ -35,8 +35,10 @@ npm install --save-dev cjt
 ## Reference
 
 - [Jira's table notation](https://jira.atlassian.com/secure/WikiRendererHelpAction.jspa?section=tables)
+- [RFC 4180 \- Common Format and MIME Type for Comma\-Separated Values \(CSV\) Files](https://tools.ietf.org/html/rfc4180)
 
 
-## Development
+## Development Resources
 
-https://chrome.google.com/webstore/developer/dashboard
+- [Developer Dashboard \- Chrome Web Store](https://chrome.google.com/webstore/developer/dashboard?hl=en-US&gl=JP)
+- [Comma\-separated values \- Wikipedia](https://en.wikipedia.org/wiki/Comma-separated_values#Example)

@@ -2,6 +2,7 @@
 const cjt = require('../src/cjt')
 const _ = require('lodash')
 const crypto = require('crypto')
+const path = require('path')
 
 /**
  * https://developer.chrome.com/apps/declare_permissions#manifest
@@ -10,7 +11,7 @@ const crypto = require('crypto')
  * @param chrome
  */
 const main = (w, chrome) => {
-  const SCRIPT_ID = 'cjt-convert'
+  const SCRIPT_ID = 'cjt-converter'
   const doc = w.document
   const hash = crypto.createHash('sha256')
 
@@ -43,6 +44,7 @@ const main = (w, chrome) => {
   }
 
   const hook = (info) => {
+    // Need to fetch selected text via message from content-script because info.selectionText doesn't keep line breaks
     console.log('info.selectionText:', info.selectionText)
     if (info.selectionText.length > 1) {
       activeTab((tabs) => {
@@ -54,13 +56,10 @@ const main = (w, chrome) => {
   const convert = (text) => {
     const messageId = hash.update(text).digest('hex')
     const converted = cjt.convert(text)
+    const sec = Math.floor(Date.now() / 1000)
     console.log('text:', text)
-    console.log(
-      text.split(),
-      text.split('\n')
-    )
     copy(converted, 'text/plain')
-    notify(messageId, 'Copied to clipboard', converted, 2000)
+    notify(sec + messageId, 'Copied to clipboard', converted, 2000)
   }
 
   const notify = (notificationId, message, data, duration) => {
@@ -69,7 +68,7 @@ const main = (w, chrome) => {
       title: SCRIPT_ID,
       message: message,
       contextMessage: data,
-      iconUrl: 'image/icon_128.png',
+      iconUrl: path.join('image', 'icon_128.png'),
       eventTime: Date.now() + duration
     })
   }
