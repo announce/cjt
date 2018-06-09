@@ -1,12 +1,4 @@
-# cjt
-!/.editorconfig
-!/.travis.yml
-!/.nvmrc
-/dist/*
-!/dist/.gitkeep
-/tmp/*
-!/tmp/.gitkeep
-/*.zip
+# Project
 
 # Logs
 logs

@@ -26,8 +26,6 @@ Output:
 
 ## Installation
 
-[cjt \- Chrome Web Store](https://chrome.google.com/webstore/detail/pagmnllnggjajagmlelanjlbompjelmd/publish-accepted)
-
 ```
 npm install --save-dev cjt
 ```
@@ -35,8 +33,5 @@ npm install --save-dev cjt
 ## Reference
 
 - [Jira's table notation](https://jira.atlassian.com/secure/WikiRendererHelpAction.jspa?section=tables)
+- [RFC 4180 \- Common Format and MIME Type for Comma\-Separated Values \(CSV\) Files](https://tools.ietf.org/html/rfc4180)
 
-
-## Development
-
-https://chrome.google.com/webstore/developer/dashboard
