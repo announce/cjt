@@ -3,7 +3,7 @@
 const assert = require('assert')
 const cjt = require('../src/cjt')
 
-describe('Conversion', function () {
+describe('Conversion', () => {
   let csv, jiraTable
   beforeEach(() => {
     csv = `
