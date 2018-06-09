@@ -5,6 +5,9 @@
 !.nvmrc
 !.travis.yml
 
+/dist/
+!/dist/.gitkeep
+
 # Logs
 logs
 *.log
