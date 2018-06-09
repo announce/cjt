@@ -1,4 +1,9 @@
 # Project
+.*
+!.gitignore
+!.editorconfig
+!.nvmrc
+!.travis.yml
 
 # Logs
 logs
