@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/test/cjt.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/webpack.config.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../../ymkjp/cjt-crx/.travis.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../ymkjp/cjt-crx/karma.conf.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../ymkjp/cjt-crx/test/background.js" charset="UTF-8" />
     <file url="PROJECT" charset="EUC-JP" />
   </component>
 </project>
