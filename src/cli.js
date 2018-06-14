@@ -2,7 +2,7 @@
 
 const fs = require('fs')
 const argparse = require('argparse')
-const cjt = require('cjt')
+const cjt = require('./cjt')
 
 const printJt = (err, data) => {
   if (err) throw err
