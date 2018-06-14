@@ -16,6 +16,7 @@ describe('Conversion', () => {
       '\n|col A1|col A2|col A3|' +
       '\n|col B1|col B2|col B3|'
   })
+
   describe('Convert CSV string to Jira\'s table notation', () => {
     it('should convert correctly', () => {
       assert.equal(cjt.convert(csv), jiraTable)
@@ -31,7 +32,7 @@ describe('Conversion', () => {
       `
       jiraTable =
       '||heading 1||heading 2||heading 3||' +
-      '\n|col A1||col A3|' +
+      '\n|col A1| |col A3|' +
       '\n|col B1|col B2|col B3|'
       assert.equal(cjt.convert(`\n\n${csv}\n\n`), jiraTable)
     })

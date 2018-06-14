@@ -26,9 +26,10 @@ const hasElement = (row) => {
 }
 
 const format = (row, sep) => {
-  const r = _.map(row, _.trim)
-  const h = _.join(r, sep)
-  return `${sep}${h}${sep}`
+  const r1 = _.map(row, _.trim)
+  const r2 = _.map(r1, (r) => { return _.isEmpty(r) ? ' ' : r })
+  const s = _.join(r2, sep)
+  return `${sep}${s}${sep}`
 }
 
 const formatHeader = (row) => {
