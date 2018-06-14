@@ -27,8 +27,9 @@ const hasElement = (row) => {
 
 const format = (row, sep) => {
   const r1 = _.map(row, _.trim)
-  const r2 = _.map(r1, (r) => { return _.isEmpty(r) ? ' ' : r })
-  const s = _.join(r2, sep)
+  const r2 = _.map(r1, (r) => { return r.replace('|', '\\|') })
+  const r3 = _.map(r2, (r) => { return _.isEmpty(r) ? ' ' : r })
+  const s = _.join(r3, sep)
   return `${sep}${s}${sep}`
 }
 
