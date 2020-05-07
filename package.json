@@ -11,8 +11,8 @@
     "argparse": "^1.0.10",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "mocha": "^5.2.0",
-    "onchange": "^4.0.0",
+    "mocha": "^7.1.2",
+    "onchange": "^7.0.2",
     "power-assert": "^1.5.0",
     "standard": "^11.0.1"
   },
@@ -24,6 +24,7 @@
     "lint": "standard --env mocha --fix",
     "watch": "onchange '*.json' --delay 1000 'src/*' 'test/*' -- npm run build",
     "build": "npm run test && babel src/ -d dist/ --presets=env",
+    "prestart": "npm install",
     "start": "npm run build && npm run watch"
   },
   "standard": {
