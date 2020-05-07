@@ -5,7 +5,7 @@ const _ = require('lodash')
 const csvParser = require('javascript-csv')
 
 // https://jira.atlassian.com/secure/WikiRendererHelpAction.jspa?section=all
-const ESCAPE = /([|{}])/g
+const NOTATION_CHARS = /([|{}])/g
 
 const convert = (input) => {
   const data = csvParser.toArrays(_.trim(input))
@@ -30,7 +30,7 @@ const hasElement = (row) => {
 
 const format = (row, sep) => {
   const r1 = _.map(row, _.trim)
-  const r2 = _.map(r1, (r) => { return r.replace(ESCAPE, '\\$1') })
+  const r2 = _.map(r1, (r) => { return r.replace(NOTATION_CHARS, '\\$1') })
   const r3 = _.map(r2, (r) => { return _.isEmpty(r) ? ' ' : r })
   const s = _.join(r3, sep)
   return `${sep}${s}${sep}`
