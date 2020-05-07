@@ -39,13 +39,13 @@ describe('Conversion', () => {
     it('should escape the delimiter', () => {
       csv = `
         heading 1,heading 2,heading 3
-        col A1,c|b,col A3
-        col B1,col B2,col B3
+        col A1,c|b|d,col A3
+        col B1,{col} B2,col B3
       `
       jiraTable =
         '||heading 1||heading 2||heading 3||' +
-        '\n|col A1|c\\|b|col A3|' +
-        '\n|col B1|col B2|col B3|'
+        '\n|col A1|c\\|b\\|d|col A3|' +
+        '\n|col B1|\\{col\\} B2|col B3|'
       assert.equal(cjt.convert(`\n\n${csv}\n\n`), jiraTable)
     })
     it('should return zero-length string when the input is empty', () => {
