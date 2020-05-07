@@ -7,6 +7,11 @@ const csvParser = require('javascript-csv')
 // https://jira.atlassian.com/secure/WikiRendererHelpAction.jspa?section=all
 const NOTATION_CHARS = /([|{}])/g
 
+/**
+ * Parse CSV and normalize column values
+ * @param input
+ * @returns {string}
+ */
 const convert = (input) => {
   const data = csvParser.toArrays(_.trim(input))
   if (data.length < 1) {
@@ -28,12 +33,12 @@ const hasElement = (row) => {
   return !_.every(row, _.isEmpty)
 }
 
-const format = (row, sep) => {
-  const r1 = _.map(row, _.trim)
-  const r2 = _.map(r1, (r) => { return r.replace(NOTATION_CHARS, '\\$1') })
-  const r3 = _.map(r2, (r) => { return _.isEmpty(r) ? ' ' : r })
-  const s = _.join(r3, sep)
-  return `${sep}${s}${sep}`
+const format = (row, delimiter) => {
+  const str = row.map((columnValue) => {
+    const value = columnValue.trim().replace(NOTATION_CHARS, '\\$1')
+    return _.isEmpty(value) ? ' ' : value
+  }).join(delimiter)
+  return `${delimiter}${str}${delimiter}`
 }
 
 const formatHeader = (row) => {
