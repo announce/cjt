@@ -1,6 +1,6 @@
 {
   "name": "cjt",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Library to convert CSV text to Jira's table notation",
   "main": "dist/index.js",
   "dependencies": {
